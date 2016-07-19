@@ -199,7 +199,7 @@ func (s *Server) DisableProfiler() {
 	s.routerSwapper.Swap(s.createMux())
 }
 
-// EnableProfiler reloads the server mux adding the profiler routes.
+// EnableProfiler reloads the server mux adding the profiler routes at will
 func (s *Server) EnableProfiler() {
 	m := s.createMux()
 	profilerSetup(m)
